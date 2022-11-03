@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { NodePlopAPI } from 'node-plop';
 
 export interface GeneratorConfig {

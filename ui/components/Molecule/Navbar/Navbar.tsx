@@ -8,7 +8,7 @@ import {
 import { Menu } from 'react-feather';
 import { Root } from './Navbar.styles';
 
-interface Props extends PropsWithClassName { }
+type Props = PropsWithClassName;
 
 const Navbar: React.FC<Props> = (props: PropsWithChildren<Props>): React.ReactElement => {
   const [search, setSearch] = useState('');

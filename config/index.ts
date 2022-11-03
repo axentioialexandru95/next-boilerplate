@@ -1,1 +1,4 @@
-export const IS_NICE_APPLICATION = true;
+const config = {
+  createIndex: true,
+};
+export default config;

@@ -4,7 +4,7 @@ import React, { PropsWithChildren, useEffect, useState } from 'react';
 import { Box, TextField } from '@mui/material';
 import { Root } from './Table.styles';
 
-interface Props extends PropsWithClassName { }
+type Props = PropsWithClassName;
 
 const Table: React.FC<Props> = (props: PropsWithChildren<Props>): React.ReactElement => {
   const columns = [

@@ -1,4 +1,5 @@
 import { GeneratorConfig } from 'index';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { NodePlopAPI } from 'node-plop';
 
 declare const atomicComponent: (
@@ -28,6 +29,7 @@ declare const atomicComponent: (
     type: string;
     path: string;
     templateFile: string;
+    // eslint-disable-next-line @typescript-eslint/ban-types
     data: {};
   }[];
 

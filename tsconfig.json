@@ -1,5 +1,4 @@
 {
-  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -14,8 +13,29 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@App/*": [
+        "./app/*"
+      ],
+      "@Domain/*": [
+        "./domain/*"
+      ],
+      "@Framework/*": [
+        "./framework/*"
+      ],
+      "@Ui/*": [
+        "./ui/*"
+      ],
+      "@Config/*": [
+        "./config/*"
+      ],
+      "@Types/*": [
+        "./types/*"
+      ]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
 }
