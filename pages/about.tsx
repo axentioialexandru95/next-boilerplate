@@ -1,11 +1,11 @@
-import { Box, Container } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import Login from '@Ui/components/Molecule/Login';
 import Table from '@Ui/components/Molecule/Table';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
-export default function Home() {
+export default function About() {
   return (
     <div>
       <Head>
@@ -17,9 +17,8 @@ export default function Home() {
       <main>
         <Container maxWidth={'xl'}>
           <Box my={5}>
-            <Login />
+            <Typography variant="h1">About</Typography>
           </Box>
-          <Table />
         </Container>
       </main>
     </div>

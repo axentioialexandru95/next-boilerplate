@@ -1,11 +1,15 @@
-import { Box, Container } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import Login from '@Ui/components/Molecule/Login';
 import Table from '@Ui/components/Molecule/Table';
+import { SearchContext } from 'context/searchProvider';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useContext } from 'react';
 import styles from '../styles/Home.module.css';
+import DashboardLayout from './layout';
 
 export default function Home() {
+  const search = useContext(SearchContext);
   return (
     <div>
       <Head>
@@ -15,12 +19,13 @@ export default function Home() {
       </Head>
 
       <main>
-        <Container maxWidth={'xl'}>
-          <Box my={5}>
-            <Login />
-          </Box>
-          <Table />
-        </Container>
+        <DashboardLayout>
+          <Container maxWidth={'xl'}>
+            <Typography variant="h1">Dashboard</Typography>
+            <Typography variant="h2">{search}</Typography>
+          </Container>
+
+        </DashboardLayout>
       </main>
     </div>
   );

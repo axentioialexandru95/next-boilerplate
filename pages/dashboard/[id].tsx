@@ -1,11 +1,16 @@
-import { Box, Container } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import Login from '@Ui/components/Molecule/Login';
 import Table from '@Ui/components/Molecule/Table';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.css';
+import DashboardLayout from './layout';
 
-export default function Home() {
+export default function Post() {
+  const router = useRouter();
+  const { id } = router.query;
+
   return (
     <div>
       <Head>
@@ -15,12 +20,11 @@ export default function Home() {
       </Head>
 
       <main>
-        <Container maxWidth={'xl'}>
-          <Box my={5}>
-            <Login />
-          </Box>
-          <Table />
-        </Container>
+        <DashboardLayout>
+          <Container maxWidth={'xl'}>
+            <Typography variant="h1">{id}</Typography>
+          </Container>
+        </DashboardLayout>
       </main>
     </div>
   );
