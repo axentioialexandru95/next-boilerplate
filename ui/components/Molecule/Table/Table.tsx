@@ -1,6 +1,8 @@
 import { PropsWithClassName } from '@Framework/ui';
 import { DataGrid } from '@mui/x-data-grid';
-import React, { PropsWithChildren, useEffect, useState } from 'react';
+import React, {
+  EventHandler, PropsWithChildren, useEffect, useState,
+} from 'react';
 import { Box, TextField } from '@mui/material';
 import { Root } from './Table.styles';
 

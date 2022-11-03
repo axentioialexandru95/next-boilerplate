@@ -1,4 +1,3 @@
-const config = {
+export const config = {
   createIndex: true,
 };
-export default config;

@@ -3,6 +3,7 @@ import Navbar from '@Ui/components/Molecule/Navbar';
 import Head from 'next/head';
 
 export default function DashboardLayout({ children }: any) {
+  console.log(children);
   return (
     <div>
       <Head>

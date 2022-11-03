@@ -1,8 +1,11 @@
 import { Container, Typography } from '@mui/material';
+import { SearchContext } from 'context/searchProvider';
 import Head from 'next/head';
+import { useContext } from 'react';
 import DashboardLayout from './layout';
 
 export default function Home() {
+  const search = useContext(SearchContext);
   return (
     <div>
       <Head>
@@ -15,7 +18,7 @@ export default function Home() {
         <DashboardLayout>
           <Container maxWidth={'xl'}>
             <Typography variant="h1">Dashboard</Typography>
-            <Typography variant="h2"></Typography>
+            <Typography variant="h2">{search}</Typography>
           </Container>
 
         </DashboardLayout>
